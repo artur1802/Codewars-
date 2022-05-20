@@ -1,12 +1,18 @@
-function getMiddle(s)
-{
-  //Code goes here!
-  if(s.length%2===0){
-    return s.slice((s.length/2),(s.length/2)+2)
+String.prototype.isUpperCase = function() {
+  // your code here
+  
+  let arr=this.split('')
+  
+for(x of arr){
+  
+  if(x.isUpperCase== false){
+    
+    
+    return false
   }
-  else{
-    return s.slice((s.length/2),(s.length/2)+1)
+  
+  else {
+    return true
   }
 }
-
-console.log(getMiddle("asghs"))
+}
