@@ -1,29 +1,6 @@
 function spinWords(string){
-    let words = string.split(' ')
-
-    let result=[]
-    
- for(let i=0; i<words.length; i++){
-
-    if(words[i].length>=5){
-
-        let reversew=''
-
-         reversew= words[i].split('').reverse().join('')
-         result.push(reversew)
-
-
+    return string.replace(/\w{5,}/g, x=>x.split('').reverse().join('') )
     }
-   
-    else {
-
-        result.push(words[i])
-    }
- }
-
- return result.join(' ')
-
-}
 
 
 
