@@ -9,4 +9,4 @@ var isSquare = function(n){
       a= false;
     }
    return a;
-  }
+  }// good 
