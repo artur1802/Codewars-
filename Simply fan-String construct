@@ -1,0 +1,27 @@
+function stringsConstruction(A, B) {
+  const letterCountA = getLetterCount(A);
+  const letterCountB = getLetterCount(B);
+  let maxStrings = Infinity;
+
+  for (const letter in letterCountA) {
+    const countA = letterCountA[letter];
+    const countB = letterCountB[letter] || 0;
+    const stringsPossible = Math.floor(countB / countA);
+
+    if (stringsPossible < maxStrings) {
+      maxStrings = stringsPossible;
+    }
+  }
+
+  return maxStrings;
+}
+
+function getLetterCount(str) {
+  const count = {};
+
+  for (const char of str) {
+    count[char] = (count[char] || 0) + 1;
+  }
+
+  return count;
+}
